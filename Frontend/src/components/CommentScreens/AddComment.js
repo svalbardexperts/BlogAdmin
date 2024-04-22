@@ -46,7 +46,7 @@ const AddComment = ({ setSidebarShowStatus, slug, getStoryComments, activeUser, 
 
             if (error.response.data.error === 'Jwt expired') {
                 console.log("token expired ...")
-                navigate('/')
+                navigate('/blogadmin')
             }
             setError(error.response.data.error)
             setTimeout(() => {

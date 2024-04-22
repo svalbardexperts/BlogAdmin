@@ -36,7 +36,7 @@ const Profile = () => {
                 setLoading(false)
             }
             catch (error) {
-                navigate('/')
+                navigate('/blogadmin')
             }
         }
 

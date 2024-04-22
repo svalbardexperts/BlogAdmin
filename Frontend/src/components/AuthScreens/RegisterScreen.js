@@ -35,7 +35,7 @@ const RegisterScreen = () => {
       localStorage.setItem("authToken", data.token);
 
       setTimeout(() => {
-        navigate('/');
+        navigate('/blogadmin');
       }, 1800)
 
     } catch (error) {

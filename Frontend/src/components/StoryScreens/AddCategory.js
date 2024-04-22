@@ -61,7 +61,7 @@ const AddCategory = () => {
                     <span>
                         {success}
                     </span>
-                    <Link to="/">Go home</Link>
+                    <Link to="/blogadmin/">Go home</Link>
                 </div>}
                 <h5>Add Category</h5>
                 <input

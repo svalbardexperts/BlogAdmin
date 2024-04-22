@@ -26,63 +26,63 @@ const App = () => {
                   <div className="App">
 
                         <Routes>
-                              <Route path="/" element={<LayoutsWithHeader />}>
+                              <Route path="/blogadmin/" element={<LayoutsWithHeader />}>
 
                                     <Route path='*' element={<NotFound />} />
 
-                                    <Route exact path='/' element={<PrivateRoute />}>
-                                          <Route exact path='/' element={<Home />} />
+                                    <Route exact  path='/blogadmin/' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/' element={<Home />} />
                                     </Route>
 
-                                    <Route exact path="/story/:slug" element={<DetailStory />} />
+                                    <Route exact path="/blogadmin/story/:slug" element={<DetailStory />} />
 
-                                    <Route exact path='/addstory' element={<PrivateRoute />}>
-                                          <Route exact path='/addstory' element={<AddStory />} />
+                                    <Route exact  path='/blogadmin/addstory' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/addstory' element={<AddStory />} />
                                     </Route>
 
-                                    <Route exact path='/addcategory' element={<PrivateRoute />}>
-                                          <Route exact path='/addcategory' element={<AddCategory />} />
+                                    <Route exact  path='/blogadmin/addcategory' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/addcategory' element={<AddCategory />} />
                                     </Route>
 
-                                    <Route exact path='/profile' element={<PrivateRoute />}>
-                                          <Route exact path='/profile' element={<Profile />} />
+                                    <Route exact  path='/blogadmin/profile' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/profile' element={<Profile />} />
                                     </Route>
 
-                                    <Route exact path='/edit_profile' element={<PrivateRoute />}>
-                                          <Route exact path='/edit_profile' element={<EditProfile />} />
+                                    <Route exact  path='/blogadmin/edit_profile' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/edit_profile' element={<EditProfile />} />
                                     </Route>
 
-                                    <Route exact path='/change_Password' element={<PrivateRoute />}>
-                                          <Route exact path='/change_Password' element={<ChangePassword />} />
+                                    <Route exact  path='/blogadmin/change_Password' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/change_Password' element={<ChangePassword />} />
                                     </Route>
 
-                                    <Route exact path='/story/:slug/like' element={<PrivateRoute />}>
-                                          <Route exact path='/story/:slug/like' element={<DetailStory />} />
+                                    <Route exact  path='/blogadmin/story/:slug/like' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/story/:slug/like' element={<DetailStory />} />
                                     </Route>
 
-                                    <Route exact path='/story/:slug/edit' element={<PrivateRoute />}>
-                                          <Route exact path='/story/:slug/edit' element={<EditStory />} />
+                                    <Route exact  path='/blogadmin/story/:slug/edit' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/story/:slug/edit' element={<EditStory />} />
                                     </Route>
 
-                                    <Route exact path='/story/:slug/delete' element={<PrivateRoute />}>
-                                          <Route exact path='/story/:slug/delete' element={<DetailStory />} />
+                                    <Route exact  path='/blogadmin/story/:slug/delete' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/story/:slug/delete' element={<DetailStory />} />
                                     </Route>
-                                    <Route exact path='/story/:slug/addComment' element={<PrivateRoute />}>
-                                          <Route exact path='/story/:slug/addComment' element={<DetailStory />} />
+                                    <Route exact  path='/blogadmin/story/:slug/addComment' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/story/:slug/addComment' element={<DetailStory />} />
                                     </Route>
 
-                                    <Route exact path='/readList' element={<PrivateRoute />}>
-                                          <Route exact path='/readList' element={<ReadListPage />} />
+                                    <Route exact  path='/blogadmin/readList' element={<PrivateRoute />}>
+                                          <Route exact  path='/blogadmin/readList' element={<ReadListPage />} />
                                     </Route>
 
                               </Route>
 
-                              <Route exact path="/login" element={<LoginScreen />} />
-                              <Route exact path="/register" element={<RegisterScreen />} />
+                              <Route exact path="/blogadmin/login" element={<LoginScreen />} />
+                              <Route exact path="/blogadmin/register" element={<RegisterScreen />} />
 
-                              <Route exact path="/forgotpassword" element={<ForgotPasswordScreen />} />
+                              <Route exact path="/blogadmin/forgotpassword" element={<ForgotPasswordScreen />} />
 
-                              <Route exact path="/resetpassword" element={<ResetPasswordScreen />} />
+                              <Route exact path="/blogadmin/resetpassword" element={<ResetPasswordScreen />} />
 
 
                         </Routes>

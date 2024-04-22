@@ -30,7 +30,7 @@ const CommentItem = ({ comment, activeUser }) => {
             catch (error) {
 
                 localStorage.removeItem("authToken")
-                navigate("/")
+                navigate("/blogadmin/")
             }
         }
 
@@ -63,7 +63,7 @@ const CommentItem = ({ comment, activeUser }) => {
         }
         catch (error) {
             localStorage.removeItem("authToken")
-            navigate("/")
+            navigate("/blogadmin/")
         }
     }
 

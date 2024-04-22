@@ -29,13 +29,13 @@ const Home = () => {
 
         if (searchKey) {
           navigate({
-            pathname: '/',
+            pathname: '/blogadmin',
             search: `?search=${searchKey}${page > 1 ? `&page=${page}` : ""}`,
           });
         }
         else {
           navigate({
-            pathname: '/',
+            pathname: '/blogadmin',
             search: `${page > 1 ? `page=${page}` : ""}`,
           });
 

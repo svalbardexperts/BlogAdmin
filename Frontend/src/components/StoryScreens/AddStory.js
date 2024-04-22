@@ -89,7 +89,7 @@ const AddStory = () => {
                     <span>
                         {success}
                     </span>
-                    <Link to="/">Go home</Link>
+                    <Link to="/blogadmin/">Go home</Link>
                 </div>}
                 <h5>Choose Category</h5>
                 <select

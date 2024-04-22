@@ -28,7 +28,7 @@ const Header = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("authToken");
-        navigate('/')
+        navigate('/blogadmin/')
     };
 
     return (
@@ -36,7 +36,7 @@ const Header = () => {
         <header>
             <div className="averager">
 
-                <Link to="/" className="logo">
+                <Link to="/blogadmin/" className="logo">
                     <h5>
                         BLOG
 
@@ -49,11 +49,11 @@ const Header = () => {
                         <div className="auth_options">
 
 
-                            <Link className='addStory-link' to="/addstory"><RiPencilFill /> Add Blog </Link>
-                            <Link className='addStory-link' to="/addcategory"><RiPencilFill /> Add Category </Link>
+                            <Link className='addStory-link' to="/blogadmin/addstory"><RiPencilFill /> Add Blog </Link>
+                            <Link className='addStory-link' to="/blogadmin/addcategory"><RiPencilFill /> Add Category </Link>
 
 
-                            <Link to="/readList" className='readList-link'>
+                            <Link to="/blogadmin/readList" className='readList-link'>
                                 <BsBookmarks />
                                 <span id="readListLength">
                                     {activeUser.readListLength}
@@ -66,13 +66,13 @@ const Header = () => {
 
                                     :
 
-                                    <img src={`/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
+                                    <img src={`http://13.50.238.74/blogadmin/userPhotos/${activeUser.photo}`} alt={activeUser.username} />
 
                                 }
 
 
                                 <div className="sub-profile-wrap  ">
-                                    <Link className='profile-link' to="/profile"  > <FaUserEdit />  Profile </Link>
+                                    <Link className='profile-link' to="/blogadmin/profile"  > <FaUserEdit />  Profile </Link>
 
                                     <button className='logout-btn' onClick={handleLogout}> <BiLogOut />  Logout</button>
 
@@ -86,9 +86,9 @@ const Header = () => {
                         :
                         <div className="noAuth_options">
 
-                            <Link className='login-link' to="/login"> Login </Link>
+                            <Link className='login-link' to="blogadmin/login"> Login </Link>
 
-                            <Link className='register-link' to="/register"> Get Started</Link>
+                            <Link className='register-link' to="/blogadmin/register"> Get Started</Link>
                         </div>
 
                     }

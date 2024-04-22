@@ -31,7 +31,7 @@ const ForgotPasswordScreen = () => {
     <div className="Inclusive-forgotPassword-page">
 
       <div className="forgotPassword-big-wrapper">
-        <Link to="/" className="back_home">
+        <Link to="/blogadmin/" className="back_home">
           <BsArrowBarLeft />
         </Link>
         <form
@@ -47,7 +47,7 @@ const ForgotPasswordScreen = () => {
 
           {error && <div className="error_message">{error}</div>}
           {success && <div className="success_message  ">{success}  -
-            <Link to="/" className="ml-3">Go home</Link></div>}
+            <Link to="/blogadmin/" className="ml-3">Go home</Link></div>}
 
           <div className="input-wrapper">
 

@@ -36,7 +36,7 @@ const EditStory = () => {
                 setLoading(false)
             }
             catch (error) {
-                navigate("/")
+                navigate("/blogadmin/")
             }
         }
         getStoryInfo()
@@ -56,7 +56,7 @@ const EditStory = () => {
             setSuccess('Edit Story successfully ')
 
             setTimeout(() => {
-                navigate('/')
+                navigate('/blogadmin')
             }, 2500)
 
         }
@@ -82,7 +82,7 @@ const EditStory = () => {
                                 <span>
                                     {success}
                                 </span>
-                                <Link to="/">Go home</Link>
+                                <Link to="/blogadmin/">Go home</Link>
                             </div>}
 
                             <input

@@ -21,7 +21,7 @@ const LoginScreen = () => {
 
       setTimeout(() => {
 
-        navigate("/")
+        navigate("/blogadmin")
 
       }, 1800)
 
@@ -45,7 +45,7 @@ const LoginScreen = () => {
           <div className="top-suggest_register">
 
             <span>Don't have an account? </span>
-            <a href="/register">Sign Up</a>
+            <a href="/blogadmin/register">Sign Up</a>
 
           </div>
 
