@@ -100,7 +100,7 @@ const DetailStory = () => {
     catch (error) {
       setStory({})
       localStorage.removeItem("authToken")
-      navigate("/blogadmin/")
+      navigate("/")
     }
 
   }
@@ -117,7 +117,7 @@ const DetailStory = () => {
             authorization: `Bearer ${localStorage.getItem("authToken")}`,
           },
         })
-        navigate("/blogadmin/")
+        navigate("/")
 
       }
       catch (error) {

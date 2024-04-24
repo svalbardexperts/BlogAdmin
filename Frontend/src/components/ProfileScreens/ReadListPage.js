@@ -26,7 +26,7 @@ const ReadListPage = () => {
                 setLoading(false)
             }
             catch (error) {
-                navigate("/blogadmin/")
+                navigate("/")
             }
         }
         getUserReadingList()
