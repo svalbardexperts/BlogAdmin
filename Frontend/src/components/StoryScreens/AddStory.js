@@ -26,7 +26,7 @@ const AddStory = () => {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const { data } = await axios.get("/story/getallcategories", config)
+                const { data } = await axios.get("http://13.50.238.74/api/story/getallcategories", config)
                 setAllCategories(data.data)
             }
             catch (error) {
@@ -57,7 +57,7 @@ const AddStory = () => {
         formdata.append("content", content)
 
         try {
-            const { data } = await axios.post("/story/addstory", formdata, config)
+            const { data } = await axios.post("http://13.50.238.74/api/story/addstory", formdata, config)
             setSuccess('Add blog successfully ')
 
             clearInputs()

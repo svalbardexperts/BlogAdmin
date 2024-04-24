@@ -25,7 +25,7 @@ const ResetPasswordScreen = () => {
 
     try {
       const { data } = await axios.put(
-        `/auth/resetpassword?resetPasswordToken=${token}`,
+        `http://13.50.238.74/api/auth/resetpassword?resetPasswordToken=${token}`,
         {
           password,
         }

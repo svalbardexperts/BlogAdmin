@@ -27,7 +27,7 @@ const EditStory = () => {
         const getStoryInfo = async () => {
             setLoading(true)
             try {
-                const { data } = await axios.get(`/story/editStory/${slug}`, config)
+                const { data } = await axios.get(`http://13.50.238.74/api/story/editStory/${slug}`, config)
                 setStory(data.data)
                 setTitle(data.data.title)
                 setContent(data.data.content)
@@ -51,7 +51,7 @@ const EditStory = () => {
         formdata.append("previousImage", previousImage)
 
         try {
-            const { data } = await axios.put(`/story/${slug}/edit`, formdata, config)
+            const { data } = await axios.put(`http://13.50.238.74/api/story/${slug}/edit`, formdata, config)
 
             setSuccess('Edit Story successfully ')
 

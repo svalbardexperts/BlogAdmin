@@ -24,7 +24,7 @@ const RegisterScreen = () => {
 
     try {
       const { data } = await axios.post(
-        "/auth/register",
+        "http://13.50.238.74/api/auth/register",
         {
           username,
           email,

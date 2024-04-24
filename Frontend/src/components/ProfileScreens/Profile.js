@@ -29,7 +29,7 @@ const Profile = () => {
             setLoading(true)
 
             try {
-                const { data } = await axios.get("/user/profile", config)
+                const { data } = await axios.get("http://13.50.238.74/api/user/profile", config)
 
                 setUser(data.data)
 

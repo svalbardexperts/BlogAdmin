@@ -27,7 +27,7 @@ const EditProfile = () => {
         formdata.append("photo", photo)
 
         try {
-            const { data } = await axios.post("/user/editProfile", formdata, config)
+            const { data } = await axios.post("http://13.50.238.74/api/user/editProfile", formdata, config)
 
             setSuccess('Edit Profile successfully ')
             setTimeout(() => {
