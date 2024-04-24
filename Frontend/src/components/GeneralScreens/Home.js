@@ -89,7 +89,7 @@ const Home = () => {
 
           </div>
 
-          <Pagination page={page} pages={pages} changePage={setPage} />
+          {/* <Pagination page={page} pages={pages} changePage={setPage} /> */}
 
         </div>
 
