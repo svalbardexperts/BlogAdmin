@@ -21,7 +21,7 @@ const PrivateRoute =( ) => {
             },
         };
         try {
-            const { data } = await axios.get("http://13.50.238.74/api/auth/private", config); 
+            const { data } = await axios.get("https://svalbardexperts.com/api/auth/private", config); 
 
             setAuth(true)
             setActiveUser(data.user)

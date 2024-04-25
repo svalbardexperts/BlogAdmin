@@ -30,7 +30,7 @@ const ChangePassword = () => {
 
         try {
             const { data } = await axios.put(
-                "http://13.50.238.74/api/user/changePassword",
+                "https://svalbardexperts.com/api/user/changePassword",
                 {
                     newPassword,
                     oldPassword

@@ -29,7 +29,7 @@ const AddCategory = () => {
             description
         }
         try {
-            const { data } = await axios.post("http://13.50.238.74/api/story/addcategory",payload , config)
+            const { data } = await axios.post("https://svalbardexperts.com/api/story/addcategory",payload , config)
             setSuccess('Add blog successfully ')
 
             clearInputs()

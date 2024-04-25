@@ -25,7 +25,7 @@ const ResetPasswordScreen = () => {
 
     try {
       const { data } = await axios.put(
-        `http://13.50.238.74/api/auth/resetpassword?resetPasswordToken=${token}`,
+        `https://svalbardexperts.com/api/auth/resetpassword?resetPasswordToken=${token}`,
         {
           password,
         }

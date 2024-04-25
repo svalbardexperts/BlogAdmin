@@ -27,7 +27,7 @@ const EditProfile = () => {
         formdata.append("photo", photo)
 
         try {
-            const { data } = await axios.post("http://13.50.238.74/api/user/editProfile", formdata, config)
+            const { data } = await axios.post("https://svalbardexperts.com/api/user/editProfile", formdata, config)
 
             setSuccess('Edit Profile successfully ')
             setTimeout(() => {
@@ -119,7 +119,7 @@ const EditProfile = () => {
                                     <div class="absolute">
                                         Currently Image
                                     </div>
-                                    <img src={`http://13.50.238.74/api/userPhotos/${previousPhoto}`} alt="userPhoto" />
+                                    <img src={`https://svalbardexperts.com/api/userPhotos/${previousPhoto}`} alt="userPhoto" />
                                 </div>
 
                             </div>
