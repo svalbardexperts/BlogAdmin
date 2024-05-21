@@ -212,8 +212,9 @@ const DetailStory = () => {
                     </div>
                   }
 
-                  {activeUser && story.author &&
-                    story.author._id === activeUser._id ?
+                  {true ?
+                  // activeUser && story.author &&
+                    // story.author._id === activeUser._id ?
                     <div className="top_story_transactions">
                       <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                         <FiEdit />
@@ -238,7 +239,7 @@ const DetailStory = () => {
               <div className='story-content' >
 
                 <div className="story-banner-img">
-                  <img src={`/storyImages/${story.image}`} alt={story.title} />
+                  <img src={`https://svalbardexperts.com/api/storyImages/${story.image}`} alt={story.title} />
 
                 </div>
 
@@ -296,8 +297,10 @@ const DetailStory = () => {
                         <BsThreeDots />
                       </i>
 
-                      {activeUser &&
-                        story.author._id === activeUser._id ?
+                      {
+                        true ?
+                      // activeUser &&
+                        // story.author._id === activeUser._id ?
                         <div className="delete_or_edit_story  ">
                           <Link className='editStoryLink' to={`/story/${story.slug}/edit`}>
                             <p>Edit Story</p>
