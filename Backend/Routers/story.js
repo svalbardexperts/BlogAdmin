@@ -18,6 +18,12 @@ router.delete('/deletecategory/:id', [getAccessToRoute], deleteCategory)
 
 router.post("/addstory" ,[getAccessToRoute, imageupload.single("image")],addStory)
 
+router.post('/addImage', imageupload.single("image"), (req, res) => {
+    res.json({
+        url: `https://svalbardexperts.com/api/storyImages/${req.savedStoryImage}`
+    })
+})
+
 router.post("/:slug", checkStoryExist, detailStory)
 
 router.post("/:slug/like",[getAccessToRoute,checkStoryExist] ,likeStory)

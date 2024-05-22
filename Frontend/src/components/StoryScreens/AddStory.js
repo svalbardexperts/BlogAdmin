@@ -7,7 +7,8 @@ import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { AuthContext } from "../../Context/AuthContext";
 import { AiOutlineUpload } from 'react-icons/ai'
 import { FiArrowLeft } from 'react-icons/fi'
-import '../../Css/AddStory.css'
+import '../../Css/AddStory.css';
+import { CustomUploadAdapterPlugin } from '../CustomUploadAdapter';
 
 const AddStory = () => {
 
@@ -47,6 +48,8 @@ const AddStory = () => {
         editorEl.current.editor.setData('')
         imageEl.current.value = ""
     }
+
+        
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -122,6 +125,18 @@ const AddStory = () => {
                         setContent(data)
                     }}
                     ref={editorEl}
+
+                    config={{
+                        extraPlugins: [CustomUploadAdapterPlugin],
+                        simpleUpload: {
+                            uploadUrl: 'https://svalbardexperts.com/api/story/addImage',
+                            // headers: {
+                                // Authorization: `Bearer ${config.token}`
+                            // }
+                        }
+                    }}
+
+
                 />
                 <div class="StoryImageField">
                     <AiOutlineUpload />

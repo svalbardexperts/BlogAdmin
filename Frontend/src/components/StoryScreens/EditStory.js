@@ -7,6 +7,7 @@ import { useNavigate, useParams, Link } from 'react-router-dom';
 import { AuthContext } from "../../Context/AuthContext";
 import { AiOutlineUpload } from 'react-icons/ai'
 import '../../Css/EditStory.css'
+import { CustomUploadAdapterPlugin } from '../CustomUploadAdapter';
 
 const EditStory = () => {
     const { config } = useContext(AuthContext)
@@ -23,7 +24,6 @@ const EditStory = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-
         const getStoryInfo = async () => {
             setLoading(true)
             try {
@@ -101,6 +101,17 @@ const EditStory = () => {
                                     setContent(data)
                                 }}
                                 data={content}
+
+
+                                config={{
+                                    extraPlugins: [CustomUploadAdapterPlugin],
+                                    simpleUpload: {
+                                        uploadUrl: 'https://svalbardexperts.com/api/story/addImage',
+                                        // headers: {
+                                        // Authorization: `Bearer ${config.token}`
+                                        // }
+                                    }
+                                }}
 
                             />
 
